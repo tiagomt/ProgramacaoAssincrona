@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- FUNCIONA APENAS EM LIVE SERVER -->
+
+    <h1 id="titulo">Teste</h1>
+
+
+    <input type="text" name="" id="txtBox">
+    <input type="button" value="Clique" id="botao" name="botao">
+
+    <script>
+
+        let btn = document.getElementById("botao")
+        let txtBox = document.getElementById("txtBox")
+
+        btn.addEventListener("click", (evt) => {
+
+            // alert("Ola, mundo")
+            window.parent.document.getElementById("texto").innerHTML = txtBox.value;
+            window.parent.document.getElementById("example2").contentWindow.document.getElementById("txtParent3").innerHTML = txtBox.value
+
+        })
+    </script>
+</body>
+
+</html>
